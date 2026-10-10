@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f7f9">
+    <meta name="description" content="レストラン「モンテイア」の店内用予約管理システム。卓ごとの予約情報を確認できます。">
+    <meta name="robots" content="noindex, nofollow">
+    <title>モンテイア｜予約管理システム</title>
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preload" href="./assets/puzzle-reference.png" as="image">
+    <script type="module" src="./app.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M7 3v4m10-4v4M4 10h16M6 5h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z"/><path d="m8 15 2.5 2.5L16 12"/></svg>
+        </span>
+        <div class="brand-name">モンテイア<span>予約管理システム</span></div>
+      </div>
+      <button class="restart-button" id="restart-button" hidden type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10a9 9 0 1 1 2 8M3 4v6h6"/></svg>
+        はじめから
+      </button>
+    </header>
+
+    <main class="main">
+      <nav aria-label="確認手順" class="progress-nav">
+        <ol class="progress" id="progress">
+          <li data-step="0" class="current" aria-current="step"><span class="step-mark">1</span><span>スタート</span></li>
+          <li data-step="1"><span class="step-mark">2</span><span>チェック</span></li>
+          <li data-step="2"><span class="step-mark">3</span><span>予約照会</span></li>
+        </ol>
+      </nav>
+      <div id="screen" class="screen"></div>
+      <noscript><p class="noscript">このシステムを使用するには、ブラウザのJavaScriptを有効にしてください。</p></noscript>
+    </main>
+
+    <footer class="site-footer"><span class="footer-line"></span>モンテイア ／ 店内用予約管理システム<span class="footer-line"></span></footer>
+
+    <dialog id="unavailable-dialog" class="dialog" aria-labelledby="unavailable-title" aria-describedby="unavailable-description">
+      <div class="dialog-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 8v5m0 3h.01M10.3 4.8 2.7 18a2 2 0 0 0 1.7 3h15.2a2 2 0 0 0 1.7-3L13.7 4.8a2 2 0 0 0-3.4 0Z"/></svg></div>
+      <p class="eyebrow">INFORMATION</p>
+      <h2 id="unavailable-title">現在、閲覧できません</h2>
+      <p id="unavailable-description" class="dialog-description"></p>
+      <button type="button" class="button button-primary" id="close-unavailable">卓の選択に戻る</button>
+    </dialog>
+
+    <dialog id="restart-dialog" class="dialog" aria-labelledby="restart-title">
+      <p class="eyebrow">RESTART</p>
+      <h2 id="restart-title">最初からやり直しますか？</h2>
+      <p class="dialog-description">チェックの状態をリセットし、<br>最初の画面に戻ります。</p>
+      <div class="dialog-actions">
+        <button type="button" class="button button-secondary" id="cancel-restart" autofocus>続ける</button>
+        <button type="button" class="button button-primary" id="confirm-restart">やり直す</button>
+      </div>
+    </dialog>
+  </body>
+</html>
