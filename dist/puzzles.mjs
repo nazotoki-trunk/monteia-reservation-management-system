@@ -6,10 +6,10 @@ export const CHALLENGES = Object.freeze([
     number: 1,
     correctTiles: Object.freeze([0, 2]),
     tiles: Object.freeze([
-      { viewport: "463 124 94 93", label: "左上のタイル：文字、豆の絵、矢印と疑問符" },
-      { viewport: "560 124 94 93", label: "右上のタイル：文字と動物、人形の絵" },
-      { viewport: "463 220 94 94", label: "左下のタイル：並んだ複数の「さ」" },
-      { viewport: "560 220 94 94", label: "右下のタイル：五線譜と音符" },
+      { image: "./assets/puzzles/1.jpg", label: "左上のタイル：文字、豆の絵、矢印と疑問符" },
+      { image: "./assets/puzzles/2.jpg", label: "右上のタイル：文字と動物、人形の絵" },
+      { image: "./assets/puzzles/3.jpg", label: "左下のタイル：並んだ複数の「さ」" },
+      { image: "./assets/puzzles/4.jpg", label: "右下のタイル：五線譜と音符" },
     ]),
   }),
   Object.freeze({
@@ -18,10 +18,10 @@ export const CHALLENGES = Object.freeze([
     number: 2,
     correctTiles: Object.freeze([0, 1, 2, 3]),
     tiles: Object.freeze([
-      { viewport: "794 124 93 93", label: "左上のタイル：枠の中にある二つの絵" },
-      { viewport: "890 124 94 93", label: "右上のタイル：「まみむねも」の文字" },
-      { viewport: "794 220 93 94", label: "左下のタイル：「かるた→肩」「はなし→橋」「こたえ→？」" },
-      { viewport: "890 220 94 94", label: "右下のタイル：「め」と「く」、山と石の絵" },
+      { image: "./assets/puzzles/5.jpg", label: "左上のタイル：枠の中にある二つの絵" },
+      { image: "./assets/puzzles/6.jpg", label: "右上のタイル：「まみむねも」の文字" },
+      { image: "./assets/puzzles/7.jpg", label: "左下のタイル：「かるた→肩」「はなし→橋」「こたえ→？」" },
+      { image: "./assets/puzzles/8.jpg", label: "右下のタイル：「め」と「く」、山と石の絵" },
     ]),
   }),
 ]);

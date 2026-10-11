@@ -39,12 +39,9 @@ function renderWelcome(container, onBegin) {
 }
 
 function tileMarkup(tile, index) {
-  // The SVG viewport displays an unchanged part of the supplied reference.
-  // Keeping the source artwork preserves every clue, including letter sizes.
+  // Use the original artwork so every clue and relative letter size is preserved.
   return `<button class="tile" type="button" data-tile="${index}" aria-pressed="false" aria-label="${tile.label}">
-    <svg class="tile-art" viewBox="${tile.viewport}" aria-hidden="true" focusable="false">
-      <image href="./assets/puzzle-reference.png" width="1116" height="786"/>
-    </svg>
+    <img class="tile-art" src="${tile.image}" width="1181" height="1181" alt="" draggable="false">
     <span class="tile-check" aria-hidden="true">${icon("check")}</span>
   </button>`;
 }
