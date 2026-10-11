@@ -1,4 +1,4 @@
-import { CHALLENGES, TABLE_NUMBERS, getReservation, isCorrectSelection } from "./puzzles.mjs";
+import { CHALLENGES, TABLE_NUMBERS, getReservation, isCorrectSelection } from "./puzzles.mjs?v=9c445bccbcec";
 
 const ICON_PATHS = Object.freeze({
   arrow: '<path d="M4 12h16m-6-6 6 6-6 6"/>',
