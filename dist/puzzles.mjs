@@ -35,7 +35,7 @@ export function isCorrectSelection(challenge, selectedTiles) {
 export const TABLE_NUMBERS = Object.freeze([1, 2, 3, 4, 5, 6, 7, 8]);
 
 const RESERVATION = Object.freeze({
-  tableNumber: 3,
+  tableNumber: 1,
   guests: Object.freeze([
     Object.freeze({ seat: 1, name: "大原　啓介", gender: "男" }),
     Object.freeze({ seat: 2, name: "林　友恵", gender: "女" }),
